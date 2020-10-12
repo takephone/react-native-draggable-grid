@@ -263,6 +263,10 @@ export const DraggableGrid = function<DataType extends IBaseItemType>(
     }
   }
   function getBlockStyle(itemIndex: number) {
+    if (blockWidth!==props.style.width)
+    {
+        setBlockWidth(props.style.width);
+    }
     return [
       {
         justifyContent: 'center',
